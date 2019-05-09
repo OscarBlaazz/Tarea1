@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:gauge="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".MainActivity"
+    android:background="@color/Aqua"
+    tools:showIn="@layout/activity_main">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Ingrese fecha: "
+        android:textColor="@color/Black"
+        android:layout_margin="15dp"/>
+
+
+    <android.support.design.widget.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <EditText
+            android:id="@+id/fecha"
+            android:layout_width="match_parent"
+            android:layout_height="51dp"
+            android:layout_gravity="end|fill"
+            android:hint="01012019"
+            android:inputType="date"/>
+
+    </android.support.design.widget.TextInputLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center">
+
+
+        <Button
+            android:id="@+id/aceptar"
+            android:layout_width="125dp"
+            android:layout_height="match_parent"
+            android:text="Aceptar" />
+
+        <Button
+            android:id="@+id/actualizar"
+            android:layout_width="125dp"
+            android:layout_height="match_parent"
+            android:text="Actualizar" />
+
+        <Button
+            android:id="@+id/volver"
+            android:layout_width="120dp"
+            android:layout_height="match_parent"
+            android:text="Volver" />
+
+    </LinearLayout>
+
+    <de.nitri.gauge.Gauge
+        android:id="@+id/gaugeAmbiente"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp"
+        gauge:initialValue="0"
+        gauge:maxValue="60"
+        gauge:minValue="0"
+        gauge:totalNicks="70"
+        gauge:valuePerNick="1" />
+</LinearLayout>
